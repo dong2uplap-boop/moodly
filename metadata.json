@@ -1,0 +1,5 @@
+{
+  "name": "Moodly - 감정 기록 및 분석",
+  "description": "당신의 하루를 기록하고 AI가 분석한 감정을 통해 마음을 관리하세요. 알림 기능을 통해 꾸준한 기록을 도와줍니다.",
+  "requestFramePermissions": ["notifications"]
+}
