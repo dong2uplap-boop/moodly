@@ -1,16 +1,15 @@
 import React from 'react'
 import { motion } from 'motion/react'
-import { ArrowLeft, Sparkles } from 'lucide-react'
+import { ArrowLeft } from 'lucide-react'
 import type { Screen } from '../types'
 
 interface WriteScreenProps {
   content: string
   onContentChange: (content: string) => void
-  onAnalyze: () => void
   onNavigate: (screen: Screen) => void
 }
 
-export function WriteScreen({ content, onContentChange, onAnalyze, onNavigate }: WriteScreenProps) {
+export function WriteScreen({ content, onContentChange, onNavigate }: WriteScreenProps) {
   return (
     <motion.div
       key="write"
@@ -42,11 +41,10 @@ export function WriteScreen({ content, onContentChange, onAnalyze, onNavigate }:
       <motion.button
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: content.trim() ? 1 : 0, y: content.trim() ? 0 : 10 }}
-        onClick={onAnalyze}
+        onClick={() => onNavigate('emotion-select')}
         disabled={!content.trim()}
         className="w-full py-5 rounded-3xl btn-dreamy hover:scale-[1.02] active:scale-[0.98] transition-all disabled:opacity-20 flex items-center justify-center gap-2"
       >
-        <Sparkles size={20} />
         내 마음은
       </motion.button>
     </motion.div>

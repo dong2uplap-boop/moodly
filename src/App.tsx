@@ -115,7 +115,6 @@ export default function App() {
               key="write"
               content={currentContent}
               onContentChange={setCurrentContent}
-              onAnalyze={handleAnalyze}
               onNavigate={navigate}
             />
           )}
